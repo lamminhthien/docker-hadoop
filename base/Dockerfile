@@ -1,3 +1,4 @@
+FROM python:3.8-slim-buster
 FROM debian:9
 
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
