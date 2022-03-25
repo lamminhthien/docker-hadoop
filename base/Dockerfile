@@ -1,5 +1,5 @@
-FROM python:3.8-slim-buster
-FROM debian:9
+
+FROM ubuntu:18.04
 
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 MAINTAINER Giannis Mouchakis <gmouchakis@iit.demokritos.gr>
@@ -11,7 +11,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
       netcat \
       gnupg \
       libsnappy-dev \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    apt -y upgrade
       
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 
